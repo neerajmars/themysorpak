@@ -113,3 +113,7 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+@viewport{height:device-height}
+@viewport{width:device-width}
+@-ms-viewport{height:device-height}
+@-ms-viewport{width:device-width}
