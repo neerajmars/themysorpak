@@ -55,10 +55,10 @@
                           Right link contains only icon - additional "icon-only" class
                           Additional "open-panel" class tells app to open panel when we click on this link
                         -->
-                        <a href="#" class="link icon-only open-panel"><i class="icon icon-back"></i> Back</a>
+                        <a href="#" class="link icon-only open-panel" id="backbutton"> <i class="icon icon-back"></i> Back </a>
                     </div>
                     <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-                    <div class="center sliding" style="">Home</div>
+                    <div class="center sliding" style="">TheMySorePak</div>
                     <div class="right">
                         <!--
                           Right link contains only icon - additional "icon-only" class
@@ -70,7 +70,7 @@
             </div>
 <div data-role="page" id="page" style="height: 100%; width: 100%">
     
-    <iframe src="http://themysorepak.com" data-role="content" style="position:fixed; top:45px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
+    <iframe id="ifremback" src="http://themysorepak.com" data-role="content" style="position:fixed; top:45px; left:0px; bottom:30px; right:0px; width:100%; height:94%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
     </div>
 </div>
 </div>
@@ -82,8 +82,11 @@
     <script type="text/javascript" src="js/my-app.js"></script>
     <script type="text/javascript">
         app.initialize();
+$("#backbutton").click(function(){
+  document.getElementById('ifremback').contentWindow.history.go(-1);  
 
-
+});
+       
     </script>
 </body>
 
